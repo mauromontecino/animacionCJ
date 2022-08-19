@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css" />
+  </head>
+  <body>
+    <!--ESTILOS-->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .background {
+        background-image: url(img/Fondo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+      }
+
+      /**Hamburguesa**/
+      .h4bur {
+        color: #cd7a1d;
+        font-size: 2.5em;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        padding-top: 10%;
+        padding-left: 10%;
+      }
+
+      .h2bur {
+        color: #ffff;
+        font-size: 5em;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        margin-left: 8%;
+      }
+
+      .h3bur {
+        color: #cd7a1d;
+        font-size: 2em;
+        font-family: cursive;
+        margin-left: 10%;
+      }
+      /**Img hamburguesa**/
+
+      .imgHamb {
+        position: absolute;
+        left: 45%;
+        top: 150px;
+      }
+
+      /**BOTON**/
+
+      .button {
+        backface-visibility: hidden;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        white-space: nowrap;
+        background: #cd7a1d;
+        border-radius: 500px;
+        border: 0px solid #444;
+        border-width: 0px 0px 0px 0px;
+        padding: 10px 15px 10px 43px;
+        color: #fff;
+        font-size: 1em;
+        font-family: Lucida Sans Unicode;
+        font-weight: 900;
+        font-style: normal;
+        top: 40px;
+        left: 120px;
+      }
+
+      .button > div {
+        color: #999;
+        font-size: 10px;
+        font-family: Helvetica Neue;
+        font-weight: initial;
+        font-style: normal;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+      }
+
+      .button > img {
+        color: #cd7a1d;
+        font-size: 1em;
+        background: #ffffff;
+        border-radius: 500px;
+        border: 0px solid transparent;
+        border-width: 0px 0px 0px 0px;
+        padding: 8px 8px 8px 8px;
+        margin: 6px 6px 6px 6px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0.9em;
+      }
+
+      .button > .ld {
+        font-size: initial;
+      }
+
+      /**Logo**/
+      .logo {
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        width: 50%;
+        height: 50%;
+      }
+      .logo img {
+        width: 10%;
+        height: 10%;
+      }
+
+      /**OFF**/
+
+      .descuentoOff {
+        color: #cd7a1d;
+        font-size: 60px;
+        position: absolute;
+        top: 5%;
+        left: 52%;
+      }
+
+      .imagenOff {
+        padding-left: 50%;
+        padding-top: 3%;
+      }
+
+      /**Tel Web**/
+
+      .telWeb {
+        font-size: 36px;
+        color: #ffffff;
+        padding-top: 10%;
+        margin-left: 70%;
+      }
+
+      .tel {
+        color: #cd7a1d;
+        font-size: 46px;
+      }
+
+      .animate__shakeX {
+        --animate-duration: 4s;
+      }
+
+      .animate__tada {
+        --animate-duration: 2s;
+      }
+
+      /**ANIMACION HAMBURGUESA**/
+
+      div.imageblock1 {
+        position: absolute;
+        left: -20px;
+        top: 20%;
+        font-family: "Economica";
+        font-size: 50px;
+        z-index: 2;
+        width: 100%;
+      }
+
+      .rightleftloop {
+        position: absolute;
+        -webkit-animation: rightleftloop;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: both;
+        -moz-animation: rightleftloopmz;
+        -moz-animation-duration: 5s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: both;
+        animation: rightleftloopie;
+        animation-duration: 10s; /*Duracion de la animacion en pantalla*/
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        width: 50%;
+      }
+
+      /**Cambiar translateX a 500(Mayor duracion en pantalla) o -1500(Menor duracion en pantalla)**/
+
+      @keyframes rightleftloopie {
+        0% {
+          transform: translateX(-1500px);
+        }
+        15% {
+          transform: translateX(-1500px);
+        }
+        35% {
+          transform: translateX(100%);
+        }
+        50% {
+          transform: translateX(100%);
+        }
+        75% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-1500px);
+        }
+      }
+
+      .leftrightloop {
+        position: absolute;
+        -webkit-animation: leftrightloop;
+        -webkit-animation-duration: 15s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-fill-mode: both;
+        -moz-animation: leftrightloopmz;
+        -moz-animation-duration: 10s;
+        -moz-animation-iteration-count: infinite;
+        -moz-animation-fill-mode: both;
+        animation: leftrightloopie;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        width: 100%;
+      }
+
+      /**IMAGEN ESTATICA**/
+      div.imageblock12 {
+        position: absolute;
+        font-family: "Economica";
+        font-size: 50px;
+        z-index: 2;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .imgformat1 {
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+
+    <!--FIN ESTILOS-->
+
+    <div class="background">
+      <!--OFF-->
+      <div class="logo"><img src="img/logo.png" alt="" /></div>
+      <h4
+        class="descuentoOff animate__animated animate__tada animate__infinite"
+      >
+        50%
+      </h4>
+      <div class="imagenOff"><img src="img/OFF.png" alt="" /></div>
+
+      <!--Hamburguesa-->
+      <h4 class="h4bur">Super delicious</h4>
+      <h2 class="h2bur">BURGER</h2>
+      <h3 class="h3bur">Today’s Best Deal</h3>
+
+      <!--Hamburguesa imagen-->
+      <!--<div class="imgHamb animacion2"><img src="img/hamburguesa.png" alt=""></div>-->
+      <div class="imageblock1">
+        <div class="rightleftloop">
+          <img src="img/hamburguesa.png" class="imgformat1" alt="slide" />
+        </div>
+      </div>
+      <div class="imageblock12">
+        <div class="rightleftloop2">
+          <img
+            src="img/black-jack-pepper-110826.jpg"
+            style="width: 100%; height: 100%"
+            id="imagen"
+          />
+        </div>
+      </div>
+
+      <!--Boton ORDER NOW-->
+      <div class="button animate__animated animate__shakeX animate__infinite">
+        ORDER NOW
+        <div></div>
+        <img src="img/arrow-right-solid.svg" alt="" />
+      </div>
+
+      <!--Tel - Web-->
+      <div class="telWeb">
+        <h4 class="tel">444-4444-4444</h4>
+        <h4 class="web">www.ejemplo.com</h4>
+      </div>
+    </div>
+
+    <script>
+      /**
+       * Array con las imagenes y enlaces que se iran mostrando en la web
+       */
+      var imagenes = new Array(
+        ["img/black-jack-pepper-110826.jpg"],
+        ["img/1.png"]
+      );
+      var contador = 0;
+
+      /**
+       * Funcion para cambiar la imagen y link
+       */
+      function rotarImagenes() {
+        // cambiamos la imagen y la url
+        contador++;
+        document.getElementById("imagen").src =
+          imagenes[contador % imagenes.length][0];
+      }
+
+      /**
+       * Función que se ejecuta una vez cargada la página
+       */
+      onload = function () {
+        // Cargamos una imagen aleatoria
+        rotarImagenes();
+
+        // Indicamos que cada 10 segundos cambie la imagen
+        setInterval(rotarImagenes, 10000);
+      };
+    </script>
+  </body>
+</html>
